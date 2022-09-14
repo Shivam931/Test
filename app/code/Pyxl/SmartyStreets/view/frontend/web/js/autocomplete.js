@@ -9,7 +9,7 @@ define(
     ],
     function ($, Component, SmartyStreetsSDK, checkoutData, uiRegistry) {
         'use strict';
-        console.log(SmartyStreetsSDK,"pahela check")
+
         return Component.extend({
             configData: null,
             usAutocompleteLookup: null,
@@ -27,7 +27,7 @@ define(
                 'county': 'county'
             },
 
-            initialize: function () {
+            initialize: function () { 
                 let self = this;
                 this._super();
 
@@ -49,7 +49,7 @@ define(
                 // validation
                 this.usStreetLookup = SmartyStreetsSDK.usStreet.Lookup;
                 let validationClientBuilder = new SmartyStreetsCore.ClientBuilder(autoCompleteCredentials);
-                this.validationClient = validationClientBuilder.buildUsStreetApiClient();
+                this.validationClient = validationClientBuilder.buildUsAutocompleteClient();
 
                 // set field names if is checkout
                 if (this.isCheckout) {
@@ -144,8 +144,8 @@ define(
                  * @param {object} response
                  */
                 function handleError(response) {
-                    console.log(lookup,"here" ,partialAddress)
-                    console.log(response,"hello");
+                    console.log(lookup, "help :(")
+                    console.log(response);
                 }
             },
 

@@ -17,9 +17,14 @@
     },
     "version": "2.4.5",
     "require": {
-        "magento/product-community-edition": "2.4.5",
+        "akeneo/api-php-client": "^9.0",
+        "akeneo/module-magento2-connector-community": "^103.0",
+        "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "~2.0",
-        "magento/composer-dependency-version-audit-plugin": "~0.1"
+        "magento/product-community-edition": "2.4.5",
+        "smartystreets/phpsdk": "^4.16",
+        "stripe/stripe-php": "^7",
+        "smarty/phpsdk": "4.16.20"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -73,9 +78,13 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
-        "magento2-connector-enterprise": {
-            "type": "vcs",
-            "url": "ssh://git@distribution.akeneo.com:443/magento2-connector-enterprise"
+        "pyxl-smartystreets": {
+            "type": "git",
+            "url": "https://github.com/thinkpyxl/magento2-Pyxl_SmartyStreets.git"
+        },
+        "pyxl-core": {
+            "type": "git",
+            "url": "https://github.com/thinkpyxl/magento2-Pyxl_Core.git"
         },
         "0": {
             "type": "composer",

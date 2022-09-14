@@ -1,6 +1,8 @@
 <?php
 
 namespace Hummingbird\Mod1\Humage;
+
+
 class Test 
 {
     protected $stringParam;
@@ -12,7 +14,7 @@ class Test
 //        \Magento\Catalog\Model\ProductFactory $productFactory,
 //        \Magento\Checkout\Model\Session $session,
 //        \Unit1\Test\Api\ProductRepositoryInterface $unit1ProductRepository,
-        \Magento\Catalog\Api\Data\CategoryInterface $category,
+        \Hummingbird\Mod1\Humage\TestInterface $category,
         $stringParam = "",
         array $data = []
     ) {

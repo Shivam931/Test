@@ -115,7 +115,6 @@ class Validator
             }
         } catch (SmartyException $e) {
             // Received error back from API.
-            echo "error check";
             $response['message'] = __($e->getMessage());
         } catch (\Exception $e) {
             $response['message'] = __(
