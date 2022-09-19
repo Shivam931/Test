@@ -6,13 +6,15 @@
 
 namespace Hummingbird\Mod1\Humage;
 
+use \Magento\Catalog\Api\Data\CategoryInterface;
+
 /**
  * Category data interface.
  *
  * @api
  * @since 100.0.2
  */
-interface TestInterface
+class BeforeTest implements CategoryInterface
 {
     /**#@+
      * Constants defined for keys of  data array
@@ -45,12 +47,18 @@ interface TestInterface
     // ];
     /**#@-*/
 
+    public function getCustomAttribute($attributeCode){}
+    public function getCustomAttributes(){}
+
+    public function setCustomAttribute($attributeCode, $attributeValue){}
+    public function setCustomAttributes($attributes){}
+
     /**
      * Retrieve category id.
      *
      * @return int|null
      */
-    public function getId();
+    public function getId(){}
 
     /**
      * Set category id.
@@ -58,14 +66,14 @@ interface TestInterface
      * @param int $id
      * @return $this
      */
-    public function setId($id);
+    public function setId($id){}
 
     /**
      * Get parent category ID
      *
      * @return int|null
      */
-    public function getParentId();
+    public function getParentId(){}
 
     /**
      * Set parent category ID
@@ -73,14 +81,14 @@ interface TestInterface
      * @param int $parentId
      * @return $this
      */
-    public function setParentId($parentId);
+    public function setParentId($parentId){}
 
     /**
      * Get category name
      *
      * @return string|null
      */
-    public function getName();
+    public function getName(){}
 
     /**
      * Set category name
@@ -88,14 +96,14 @@ interface TestInterface
      * @param string $name
      * @return $this
      */
-    public function setName($name);
+    public function setName($name){}
 
     /**
      * Check whether category is active
      *
      * @return bool|null
      */
-    public function getIsActive();
+    public function getIsActive(){}
 
     /**
      * Set whether category is active
@@ -103,14 +111,14 @@ interface TestInterface
      * @param bool $isActive
      * @return $this
      */
-    public function setIsActive($isActive);
+    public function setIsActive($isActive){}
 
     /**
      * Get category position
      *
      * @return int|null
      */
-    public function getPosition();
+    public function getPosition(){}
 
     /**
      * Set category position
@@ -118,14 +126,14 @@ interface TestInterface
      * @param int $position
      * @return $this
      */
-    public function setPosition($position);
+    public function setPosition($position){}
 
     /**
      * Get category level
      *
      * @return int|null
      */
-    public function getLevel();
+    public function getLevel(){}
 
     /**
      * Set category level
@@ -133,21 +141,21 @@ interface TestInterface
      * @param int $level
      * @return $this
      */
-    public function setLevel($level);
+    public function setLevel($level){}
 
     /**
      * Retrieve children ids comma separated.
      *
      * @return string|null
      */
-    public function getChildren();
+    public function getChildren(){}
 
     /**
      * Retrieve category creation date and time.
      *
      * @return string|null
      */
-    public function getCreatedAt();
+    public function getCreatedAt(){}
 
     /**
      * Set category creation date and time.
@@ -155,14 +163,14 @@ interface TestInterface
      * @param string $createdAt
      * @return $this
      */
-    public function setCreatedAt($createdAt);
+    public function setCreatedAt($createdAt){}
 
     /**
      * Retrieve category last update date and time.
      *
      * @return string|null
      */
-    public function getUpdatedAt();
+    public function getUpdatedAt(){}
 
     /**
      * Set category last update date and time.
@@ -170,14 +178,14 @@ interface TestInterface
      * @param string $updatedAt
      * @return $this
      */
-    public function setUpdatedAt($updatedAt);
+    public function setUpdatedAt($updatedAt){}
 
     /**
      * Retrieve category full path.
      *
      * @return string|null
      */
-    public function getPath();
+    public function getPath(){}
 
     /**
      * Set category full path.
@@ -185,14 +193,14 @@ interface TestInterface
      * @param string $path
      * @return $this
      */
-    public function setPath($path);
+    public function setPath($path){}
 
     /**
      * Retrieve available sort by for category.
      *
      * @return string[]|null
      */
-    public function getAvailableSortBy();
+    public function getAvailableSortBy(){}
 
     /**
      * Set available sort by for category.
@@ -200,14 +208,14 @@ interface TestInterface
      * @param string[]|string $availableSortBy
      * @return $this
      */
-    public function setAvailableSortBy($availableSortBy);
+    public function setAvailableSortBy($availableSortBy){}
 
     /**
      * Get category is included in menu.
      *
      * @return bool|null
      */
-    public function getIncludeInMenu();
+    public function getIncludeInMenu(){}
 
     /**
      * Set category is included in menu.
@@ -215,14 +223,14 @@ interface TestInterface
      * @param bool $includeInMenu
      * @return $this
      */
-    public function setIncludeInMenu($includeInMenu);
+    public function setIncludeInMenu($includeInMenu){}
 
     /**
      * Retrieve existing extension attributes object or create a new one.
      *
      * @return \Magento\Catalog\Api\Data\CategoryExtensionInterface|null
      */
-    public function getExtensionAttributes();
+    public function getExtensionAttributes(){}
 
     /**
      * Set an extension attributes object.
@@ -230,5 +238,5 @@ interface TestInterface
      * @param \Magento\Catalog\Api\Data\CategoryExtensionInterface $extensionAttributes
      * @return $this
      */
-    public function setExtensionAttributes(\Magento\Catalog\Api\Data\CategoryExtensionInterface $extensionAttributes);
+    public function setExtensionAttributes(\Magento\Catalog\Api\Data\CategoryExtensionInterface $extensionAttributes){}
 }

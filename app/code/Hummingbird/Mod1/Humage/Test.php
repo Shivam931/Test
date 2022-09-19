@@ -14,7 +14,7 @@ class Test
 //        \Magento\Catalog\Model\ProductFactory $productFactory,
 //        \Magento\Checkout\Model\Session $session,
 //        \Unit1\Test\Api\ProductRepositoryInterface $unit1ProductRepository,
-        \Hummingbird\Mod1\Humage\TestInterface $category,
+        \Magento\Catalog\Api\Data\CategoryInterface $category,
         $stringParam = "",
         array $data = []
     ) {

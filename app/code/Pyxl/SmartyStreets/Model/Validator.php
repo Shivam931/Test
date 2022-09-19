@@ -100,16 +100,26 @@ class Validator
             $lookup->setCountry($address->getCountryId());
         }
 
+        $writer = new \Zend_Log_Writer_Stream(BP . '/var/log/custom.log');
+        $logger = new \Zend_Log();
+        $logger->addWriter($writer);
+        $logger->info(print_r($lookup->getStreet(),true));
+
+
         try {
+
             $client->sendLookup($lookup);
             /** @var \SmartyStreets\PhpSdk\US_Street\Candidate[]|\SmartyStreets\PhpSdk\International_Street\Candidate[] $result */
             $result = $lookup->getResult();
             // if no results it means address is not valid.
             if (empty($result)) {
+                $logger->info(print_r("Invalid Address",true));
                 $response['message'] = __(
                     'Your address could not be validated. Please try to enter a valid address. If you continue to experience issues, please contact <a href="mailto:ecommsales@curvature.com">eCommSales@Curvature.com</a>'
                 );
             } else {
+                $logger->info(print_r("Valid Address",true));
+                echo '<script>console.log("Welcome to GeeksforGeeks!"); </script>';
                 $response['valid'] = true;
                 $response['candidates'] = $result;
             }

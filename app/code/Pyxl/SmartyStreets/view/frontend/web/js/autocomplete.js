@@ -27,7 +27,7 @@ define(
                 'county': 'county'
             },
 
-            initialize: function () { 
+            initialize: function () {
                 let self = this;
                 this._super();
 
@@ -49,7 +49,7 @@ define(
                 // validation
                 this.usStreetLookup = SmartyStreetsSDK.usStreet.Lookup;
                 let validationClientBuilder = new SmartyStreetsCore.ClientBuilder(autoCompleteCredentials);
-                this.validationClient = validationClientBuilder.buildUsAutocompleteClient();
+                this.validationClient = validationClientBuilder.buildUsStreetApiClient();
 
                 // set field names if is checkout
                 if (this.isCheckout) {
@@ -115,6 +115,7 @@ define(
              */
             lookupAddress: function (partialAddress, jqueryResponse) {
                 let lookup = new this.usAutocompleteLookup(partialAddress);
+                console.log("IHEFIUFIUgGFEULIGfEFIGfuibIGUGrahiouergqnriahg9qa");
 
                 this.autocompleteClient.send(lookup)
                     .then(showResults)
@@ -144,7 +145,7 @@ define(
                  * @param {object} response
                  */
                 function handleError(response) {
-                    console.log(lookup, "help :(")
+                    console.log("Results",lookup);
                     console.log(response);
                 }
             },
@@ -201,6 +202,7 @@ define(
                  * @param {object} response
                  */
                 function handleError(response) {
+                    
                     console.log("Error", response);
                 }
             },

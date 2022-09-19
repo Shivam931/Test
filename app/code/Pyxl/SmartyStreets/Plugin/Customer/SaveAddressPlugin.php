@@ -23,6 +23,9 @@ use Magento\Customer\Api\Data\RegionInterfaceFactory;
 use Pyxl\SmartyStreets\Model\Validator;
 use Pyxl\SmartyStreets\Helper\Config;
 
+use smartystreets\phpsdk\src\US_Autocomplete_Pro\Suggestion;
+use SmartyStreets\PhpSdk\US_Autocomplete_Pro\Lookup;
+
 class SaveAddressPlugin
 {
 
@@ -85,6 +88,7 @@ class SaveAddressPlugin
     {
         if ($this->config->isModuleEnabled()) {
             $results = $this->validator->validate($address);
+            
             if ($results['valid']) {
                 $firstCandidate = $results['candidates'][0];
                 $street = $address->getStreet();

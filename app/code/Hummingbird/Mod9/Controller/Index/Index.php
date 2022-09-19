@@ -29,7 +29,6 @@ class Index extends \Magento\Framework\App\Action\Action
     {
 
         $result = $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_PAGE);
-        echo "hello";
         return $result;
     }
 }

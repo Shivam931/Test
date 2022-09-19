@@ -23,6 +23,7 @@ class Index extends \Magento\Framework\App\Action\Action{
     {
         $result = $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_RAW);
         $result->setContents($this->test->displayParams());
+        echo '<script>console.log("Welcome to GeeksforGeeks!"); </script>';
         return $result;
     }
 }
